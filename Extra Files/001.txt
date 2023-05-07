@@ -1,0 +1,23 @@
+Topics
+- Header files
+- Basic types
+- Comment
+
+int (4 bytes)
+float (4 bytes)
+double (8 bytes)
+long int (8 bytes)	
+char (1 byte)
+bool (1 byte)
+string
+
+- Basic Input Output
+
+scanf(), printf(), gets()
+
+- Operators
+
+Arithmetic Operators 
+Assignment Operators
+Relational Operators
+Logical Operators
