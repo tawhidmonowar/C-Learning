@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+#define debug(...) _f (#__VA_ARGS__, __VA_ARGS__)
+
+template <typename Arg1>
+void _f (const char* name, Arg1&& arg1)
+{
+    cout << name << " : " << arg1 << endl;
+}
+template <typename Arg1, typename... Args>
+void _f (const char* names, Arg1&& arg1, Args&&... args)
+{
+    const char* comma = strchr (names + 1, ',');
+    cout.write (names, comma - names) << " : " << arg1 << " | ";
+    _f (comma + 1, args...);
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>debug</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
