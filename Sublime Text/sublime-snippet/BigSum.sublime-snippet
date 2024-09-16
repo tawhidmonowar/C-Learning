@@ -1,0 +1,42 @@
+<snippet>
+	<content><![CDATA[
+int charToDigit(char ch) {return ch-'0';}
+char digitToChar(int digit) {return digit+'0';}
+
+string BigSum(string x, string y)
+{
+    string result; int carry=0;
+    if(x.length() > y.length()){swap(x, y);}
+
+    reverse(x.begin(),x.end());
+    reverse(y.begin(),y.end());
+
+    for (int i = 0; i < x.length(); ++i)
+    {
+        int a = charToDigit(x[i]);
+        int b = charToDigit(y[i]);
+        int temp = a+b+carry;
+        carry = temp/10;
+        result.push_back(digitToChar(temp%10));
+    }
+
+    for (int i = x.length(); i < y.length(); ++i)
+    {
+        int a = carry;
+        int b = charToDigit(y[i]);
+        int temp = a+b;
+        carry = temp/10;
+        result.push_back(digitToChar(temp%10));
+    }
+
+    if(carry) {result.push_back(digitToChar(carry));}
+    reverse(result.begin(), result.end());
+    return result;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>BigSum</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

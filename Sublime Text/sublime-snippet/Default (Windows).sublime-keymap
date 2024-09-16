@@ -2,4 +2,6 @@
 	{ "keys": ["shift+enter"], "command": "build" },
 	{ "keys": ["shift+f12"], "command": "show_panel", "args": {"panel": "output.exec"} },
 	{ "keys": ["shift+f11"], "command": "hide_panel", "args": {"panel": "output.exec"} },
+	{ "keys": ["ctrl+alt+left"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	{ "keys": ["ctrl+alt+right"], "command": "move_to", "args": {"to": "eol", "extend": false} }
 ]
