@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+template<typename key, typename value>
+void coutMap(const std::map<key, value>& mp) {
+    for (const auto& pair : mp) {
+        cout << pair.first << ": " << pair.second << endl;
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>co_map</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
